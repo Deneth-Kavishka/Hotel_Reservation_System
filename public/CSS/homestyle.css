@@ -1,0 +1,658 @@
+.loading-bar-container {
+    width: 60%; /* Adjust width as needed */
+    background-color: #ffffff; /* Background color of the loading bar */
+    border-radius: 5px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow */
+    margin-top: 20px; /* Space between text and loading bar */
+    box-shadow: 0 0 15px #0ff;
+    }
+
+    .loading-bar {
+    width: 0; /* Start with 0 width */
+    height: 15px; /* Height of the loading bar */
+    background-color: #0ff; /* Color of the loading bar */
+    animation: loading 2s infinite; /* Animation for the loading bar */
+    box-shadow: 0 0 10px#0ff, 0 0 20px #0ff#0ff, 0 0 40px #0ff;
+    border-radius: 10px;
+    }
+
+    @keyframes loading {
+    0% {
+        width: 0%;
+    }
+    50% {
+        width: 50%;
+    }
+    75% {
+        width: 80%;
+    }
+    100% {
+        width: 100%;
+    }
+    }
+
+        /* Navbar styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+        }
+        
+        /* Header */
+        header {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background: linear-gradient(90deg, #000, #333);
+            color: #fff;
+            box-shadow: 10px 10px 10px rgba(167, 167, 167, 0.274);
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-right: auto;
+            color: #0f53a1;
+            display: flex;
+            align-items: center;
+        }
+
+        #btnStf{
+            margin: 0px 10px;
+        }
+        #btnCus{
+            margin: 0px 0px;
+        }
+
+        .nav-links {
+            display: flex;
+        }
+        
+        .nav-links a {
+            color: #ffffff; 
+            text-decoration: none; /* Remove underline */
+            margin: 0 15px; /* Space between links */
+            transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and transform */
+            font-size: 16px; /* Default font size */
+        }
+        
+        .nav-links a:hover {
+            color: #ff4c4c; /* Change color on hover */
+            transform: scale(1.3); /* Scale the link text to 150% of its original size */
+            text-decoration: underline;
+        }
+        
+        .nav-links a.selected {
+            transform: scale(1.3); /* Scale for the selected link */
+            color: #ff4c4c; /* Change color for the selected link */
+            
+        }
+        
+        .nav-links a#home.selected {
+            transform: scale(1.3); /* Default zoom for the Home link */
+            color: #ff4c4c; /* Change color for the Home link to match hover color */
+            text-transform: capitalize;
+        }
+
+        /* Animation styles */
+        .content {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .content.show {
+            opacity: 1;
+        }
+
+        #logo2{
+            width: 10cm;
+            opacity: 82%;
+        }
+
+        /*body*/
+
+        #location1 {
+            width: 100%; /* Ensure full width */
+            margin-top: 100px; 
+            padding: 0; /* Remove any default padding */
+        }
+
+        #locDl{
+            font-family: Futura SB Demi Bold;
+            font-weight: bold;
+            font-size: 32px;
+            line-height: 1.4;
+        }
+        
+        #map {
+            height: 540px;
+            width: 100%; /* Full width for the map */
+            border: 1px solid #ccc; /* Optional border */
+        }
+
+        .hide {
+            display: none;
+          }
+        
+/* About Section Styling */
+.about__img-wrapper {
+    position: relative;
+    height: 400px;
+    width: 250px;
+}
+
+.about__img {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    height: 100%;
+    object-fit: fill;
+    transition: all 0.5s ease;
+}
+
+.about__img:nth-child(1) { 
+    clip-path: polygon(0 0, 0 32%, 28% 0); transform: translateY(-1.25rem); }
+.about__img:nth-child(2) { 
+    clip-path: polygon(28% 0, 0 32%, 0 100%, 17% 100%, 90% 0); transform: translateY(-0.75rem); }
+.about__img:nth-child(3) { 
+    clip-path: polygon(100% 0, 100% 65%, 74% 100%, 17% 100%, 90% 0); transform: translateY(-0.25rem); }
+.about__img:nth-child(4) { 
+    clip-path: polygon(100% 65%, 74% 100%, 100% 100%); transform: translateY(0.25rem); }
+
+.about__img-wrapper:hover .about__img { 
+    transform: translateY(0); }
+
+
+    .about__description, .about__data {
+        text-align: justify;
+        margin-bottom: 1rem;
+        opacity: 0; /* Hidden initially */
+        transform: translateY(50px); /* Positioned below */
+        transition: opacity 0.5s ease, transform 0.5s ease; /* Transition for entry */
+    }
+    
+    .about__description.visible, .about__data.visible {
+        opacity: 1; /* Fully visible */
+        transform: translateY(0); /* Moves to original position */
+    }
+    
+    .about__data {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem; /* Space between columns */
+    }
+    
+    .data__item {
+        display: flex;
+        align-items: center;
+        color: #ffffff86;
+    }
+
+.about__link { 
+    color: hsla(255, 73%, 57%, 0.63); }
+.about__social-link { 
+    color: var(--text-color); transition: all 0.3s ease; }
+.about__social-link:hover { 
+    color: var(--first-color); }
+
+    #location1 {
+        opacity: 0; /* Hidden initially */
+        transform: translateY(50px); /* Positioned below */
+        transition: opacity 0.5s ease, transform 0.5s ease; /* Transition for entry */
+    }
+    
+    #location1.visible {
+        opacity: 1; /* Fully visible */
+        transform: translateY(0); /* Moves to original position */
+    }
+
+    .about__content-wrapper {
+        background: rgba(109, 107, 107, 0.164);
+        backdrop-filter: blur(25px);
+        padding: 2rem;
+        border-radius: 25px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .section__title,.about__line1 {
+        opacity: 0; /* Hidden initially */
+        transform: translateY(50px); /* Start slightly lower */
+        transition: opacity 0.5s ease, transform 0.5s ease; /* Transition effect */
+    }
+    
+    .section__title.visible,.about__line1.visible {
+        opacity: 1; /* Fully visible */
+        transform: translateY(0); /* Original position */
+    }    
+    
+    .ripple {
+        position: absolute;
+        width: 20px; /* Adjust size if needed */
+        height: 20px; /* Adjust size if needed */
+        border-radius: 50%;
+        background: rgba(40, 10, 109, 0.6); /* Make the ripple more visible */
+        transform: scale(0);
+        animation: ripple-animation 0.6s ease-out;
+        pointer-events: none;
+    }
+    
+    @keyframes ripple-animation {
+        to {
+            transform: scale(50); /* Make ripple larger for visibility */
+            opacity: 0; /* Fade out at the end */
+        }
+    }    
+    
+        /* Footer */
+        footer {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background: linear-gradient(90deg, #000, #333);
+            color: #fff;
+            box-shadow: 8px 8px 8px rgba(80, 1, 1, 0.2);
+        }
+
+        /*welcome section*/
+        .home {
+            position: relative; /* Set position to relative to position the pseudo-element */
+            background-color: rgba(34, 34, 34, 0.74);
+            padding-block: 3rem 3rem;
+            padding-bottom: 3rem;
+            background-image: url('/imgs/place1.jpg'); /* Optional: Transparent background image */
+            background-size: cover;
+            background-position: center;
+            overflow: hidden; /* Ensure content does not overflow the container */
+        }
+        
+        .home::before {
+            content: ''; 
+            position: absolute; /* Position it absolutely within the .home container */
+            top: 0; /* Cover the top */
+            left: 0; /* Cover the left */
+            right: 0; /* Cover the right */
+            bottom: 0; /* Cover the bottom */
+            background-color: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% opacity */
+            backdrop-filter: blur(3px); /* Apply a blur effect */
+            z-index: 1; /* Ensure it is above the background but below the content */
+        }
+        
+        /* Ensure content inside .home is above the overlay */
+        .home > * {
+            position: relative; /* Position the content above the overlay */
+            z-index: 2; /* Ensure content is above the overlay */
+        }
+
+        .home__small {
+            font-family: 'Abril Fatface', cursive; 
+            font-weight: bold;
+            letter-spacing: 1px;
+            white-space: nowrap; /* Prevents text wrapping */
+            overflow: hidden; /* Prevents overflow */
+            font-size: 28px;
+            color: rgb(255, 255, 255);
+            text-shadow: 15px black;
+        }
+        
+        .blink {
+            animation: blink-caret 0.75s step-end infinite; /* Blink effect */
+        }
+        
+        @keyframes blink-caret {
+            50% {
+                border-color: transparent; /* Hide the caret at 50% */
+            }
+        }
+        
+        .home__title, .home__subtitle {
+            font-family: 'Abril Fatface', cursive; /* Use the font from Google Fonts */
+            font-size: 38px;
+            line-height: 1.4;
+            color: rgba(255, 255, 255, 0.603);
+        }
+        
+        .home__description {
+            margin-block: 1.5rem 3rem;
+            font-family: 'Abril Fatface', cursive;
+            font-weight: bold;
+            color: cyan;
+            text-shadow: 10px cyan, 20px cyan, 40px cyan;
+        }
+
+/* Basic styling for the home container */
+.home__container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+/* Add transition effects for each element */
+.home__small {
+    transition: transform 0.5s ease-in-out;
+}
+
+.home__title,
+.home__description {
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Scale effect on hover for each element individually */
+.home__small:hover {
+    transform: scale(1.1);
+    inset: 10px; /* Optional - adjusts position */
+}
+
+.home__title:hover {
+    transform: scale(1.1);
+    inset: 10px; /* Optional - adjusts position */
+}
+
+.home__description:hover {
+    transform: scale(1.1);
+    inset: 10px; /* Optional - adjusts position */
+}
+
+
+/* Styling for the animated welcomeDiv */
+
+.welcomeDiv {
+    position: relative;
+    width: 250px;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease, filter 0.5s ease, box-shadow 0.5s ease;
+    filter: grayscale(100%) blur(2px); /* Black & white with slight blur */
+    border: 5px solid white; /* White frame */
+}
+
+.home__content#welcometext{
+    margin-top: 50px;
+}
+
+.welcomeDiv::before {
+    content: "Enjoy your vacation";
+    text-decoration: underline;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Abril Fatface', cursive;;
+    font-size: 28px;
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+/* Adjustments for the positioning of the V shape */
+.welcomeDiv#welDiv1 {
+    margin-left: 100px; /* Align the first div to the right */
+    background-image: url('/imgs/area1.jpg');
+    animation-name: slides1;
+}
+
+.welcomeDiv#welDiv2 {
+    margin-left: -15px; /* Shift the second div to the left */
+    margin-top: 0; /* Remove top margin for the second div */
+    background-image: url('/imgs/food1.jpg');
+    animation-name: slides2;
+}
+
+.welcomeDiv#welDiv3 {
+    margin-left: -15px; /* Shift the third div to the left further */
+    margin-top: 0; /* Remove top margin for the third div */
+    background-image: url('/Img1.jpg');
+    animation-name: slides3;
+}
+
+/* Hover effect to activate animation and color transition */
+.welcomeDiv:hover {
+    content: '';
+    animation: slides 15s linear infinite; /* Start animation on hover */
+    transform: scale(1.1); /* Zoom effect on hover */
+    filter: grayscale(0%) blur(0); /* Remove grayscale and blur on hover */
+    border: 5px solid rgba(0, 0, 0, 0.411); /* Make the frame transparent on hover */
+    border-radius: 15px;
+    overflow: none;
+    inset: 15px;
+
+}
+
+/* Middle border effect using a pseudo-element */
+.welcomeDiv:hover::after {
+    content: '';
+    position: absolute;
+    inset: 15px; /* Create an inset border effect */
+    border: 5px solid rgba(196, 192, 192, 0.575); /* Adjust border color as needed */
+    border-radius: 15px;
+    pointer-events: none; /* Ensure this pseudo-element doesn’t block interactions */
+}
+
+/* Keyframes for background image transition */
+@keyframes slides1 {
+    0% { background-image: url('/imgs/area1.jpg'); }
+    25% { background-image: url('/imgs/area2.jpg'); }
+    50% { background-image: url('/imgs/set5.jpg'); }
+    75% { background-image: url('/imgs/area3.jpg'); }
+    100% { background-image: url('/imgs/area3.jpg'); }
+}
+
+@keyframes slides2 {
+    0% { background-image: url('/imgs/food1.jpg'); }
+    25% { background-image: url('/imgs/food2.jpg'); }
+    50% { background-image: url('/imgs/food4.jpg'); }
+    75% { background-image: url('/imgs/food3.jpg'); }
+    100% { background-image: url('/imgs/food3.jpg'); }
+}
+
+@keyframes slides3 {
+    0% { background-image: url('/Img3.jpg'); }
+    25% { background-image: url('/Img5.jpg'); }
+    50% { background-image: url('/imgs/set3.jpg'); }
+    75% { background-image: url('/imgs/set1.jpg'); }
+    100% { background-image: url('/imgs/set5.jpg'); }
+}
+/* Fade out overlay text on hover */
+.welcomeDiv:hover::before {
+    opacity: 0;
+}
+
+
+      
+.card {
+    width: 100%; /* Make the card responsive */
+    max-width: 500px; /* Set a maximum width */
+    aspect-ratio: 1 / 0.7; /* Maintain aspect ratio */
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden; /* Ensure content doesn't overflow */
+    margin: 20px; /* Add some margin */
+}
+
+.card .image-box {
+    width: 100%; /* Ensure the image box takes full width */
+    height: 100%; /* Ensure the image box takes full height */
+}
+
+.card .image-box img {
+    width: 100%; /* Make image responsive */
+    height: 100%; /* Ensure image covers the box */
+    object-fit: cover; /* Maintain aspect ratio */
+    transition: 0.5s ease-in-out;
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 2px solid white;
+    border-radius: inherit;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.card:hover img {
+    filter: grayscale(1.2) brightness(0.4);
+}
+
+.card:hover::after {
+    opacity: 1;
+    inset: 20px;
+}
+
+.card .card_content {
+    position: absolute;
+    bottom: 0;
+    left:  0;
+    right: 0;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    transition: 0.5s ease-in-out;
+}
+
+.card:hover .card_content {
+    transform: translateY(0);
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    perspective: 1000px; /* Add perspective for 3D effect */
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s; /* Change this value to slow down the flip effect */
+    transform-style: preserve-3d; /* Maintain 3D space */
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hide back face when facing away */
+}
+
+.flip-card-front {
+    background-color: #bbb; /* Front face color */
+}
+
+.flip-card-back {
+    background-color: #000000; /* Back face color */
+    color: white;
+    transform: rotateY(180deg); /* Rotate back face */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+    padding: 20px; /* Add padding */
+    text-align: justify; /* Justify text */
+}
+
+.description {
+    margin-top: 10px; /* Add some space above the description */
+    font-size: 14px; /* Adjust font size if needed */
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg); /* Trigger flip on hover */
+}
+
+/*Service/*
+/* Styling for flip-card effect */
+.flip-card {
+    perspective: 1000px;
+    height: 250px; /* Set the height as desired */
+    border: none;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+
+/* Front of card with image */
+.flip-card-front {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    color: white;
+}
+
+.card-title{
+    color: white;
+}
+
+.card-tag{
+    color: cyan;
+}
+
+.description{
+    color: rgba(255, 255, 255, 0.767);
+    font-size: 9pt;
+}
+
+/* Back of card with text */
+.flip-card-back {
+    background-color: #000000;
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.services {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text for h2 and p */
+}
+
+#serviceLogo {
+    margin-bottom: 20px; /* Space between logo and text */
+    margin-top: 50px;
+    margin-left: 250px;
+}
+
+#serviceh2 {
+    text-align: center;
+    margin-left: 250px;
+}
+
+#serviceP {
+    text-align: center;
+    margin-left: 250px;
+    color: cyan;
+}

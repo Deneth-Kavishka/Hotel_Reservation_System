@@ -1,0 +1,133 @@
+   /* Footer styling */
+   .footer {
+    background-color: #1b1b1b;
+    color: #e0e0e0;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+
+.footer__content {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.footer__section {
+    flex: 1;
+    padding: 1rem;
+    font-size: 18px;
+    text-align: justify;
+}
+
+.footer__section h4 {
+    color: cyan;
+    margin-bottom: 1rem;
+    margin-left: 5rem;
+}
+
+.footer__section p, .footer__section ul {
+    margin-bottom: 1rem;
+    margin-left: 5rem;
+}
+
+.footer__section p{
+    color: white;
+}
+
+.footer__section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer__section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer__section ul li a {
+    color: #00b7ff;
+    text-decoration: none;
+}
+
+.footer__bottom {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    align-items: center;
+}
+
+.footer__bottom p {
+    color: #666;
+}
+.footer__bottom a, .footer__section a{
+    color: #431aa1;
+}
+
+.footer__bottom p{
+    margin-bottom: 1rem;
+    margin-left: 5rem;
+}
+
+.footer__social a img {
+    width: 24px;
+    margin: 0 0.5rem;
+}
+
+.footer{
+    margin-right: 5rem;
+    border-radius: 25px;
+    margin-left: 5rem;
+}
+
+/* WhatsApp Button Styling */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.whatsapp-icon {
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+
+.whatsapp-icon img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.ripple {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: rgba(37, 211, 102, 0.5);
+    animation: ripple-animation 1.5s infinite;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+@keyframes ripple-animation {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.8);
+        opacity: 0;
+    }
+}

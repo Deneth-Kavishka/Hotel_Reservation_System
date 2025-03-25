@@ -1,0 +1,58 @@
+body {
+    background-image: url('/imgs/place1.jpg'); /* Set the background image */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background image */
+    height: 100vh; /* Full viewport height */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    font-family: 'Abril Fatface', cursive; 
+}
+
+.blur-overlay {
+    position: absolute; /* Position the overlay absolutely */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    right: 0; /* Align to the right */
+    bottom: 0; /* Align to the bottom */
+    background: rgba(0, 0, 0, 0.432); /* White with transparency */
+    backdrop-filter: blur(7px); /* Blur effect */
+    z-index: 1; /* Place it below the card */
+}
+
+.card {
+    position: relative; /* Position the card relative to the overlay */
+    max-width: 350px; /* Original width */
+    width: 100%; /* Full width */
+    height: 350px; /* Set height */
+    padding: 20px; /* Original padding for height */
+    z-index: 2; /* Place it above the overlay */
+    background-color: rgba(255, 255, 255, 0.158); /* Semi-transparent white background */
+    backdrop-filter: blur(5px); /* Apply blur effect to the background of the card */
+    border-radius: 8px; /* Optional: rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+}
+
+.form-control {
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background for input fields */
+    border: 1px solid rgba(0, 0, 0, 0.2); /* Light border for input fields */
+    color: #000; /* Text color */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.form-control:focus {
+    background-color: rgba(255, 255, 255, 0.7); /* Slightly more opaque on focus */
+    border-color: rgba(0, 123, 255, 0.5); /* Change border color on focus */
+    outline: none; /* Remove outline */
+}
+
+.btn {
+    background-color: rgba(0, 123, 255, 0.5); /* Semi-transparent background for buttons */
+    color: #fff; /* Text color for buttons */
+    border: none; /* Remove border */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.btn:hover {
+    background-color: rgba(0, 123, 255, 0.7); /* Slightly more opaque on hover */
+}

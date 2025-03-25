@@ -1,0 +1,40 @@
+/* Dark mode (default) */
+body {
+    background-color: #000;
+    color: #ccc;
+  }
+  
+  nav {
+    background-color: #222;
+  }
+  
+  .loading-screen {
+    background-color: #000;
+    color: #0f53a1;
+  }
+  
+  .loading-bar-container {
+    background-color: #222;
+    box-shadow: 0 0 15px #0ff;
+  }
+  
+  /* Light mode */
+  body.light-mode {
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  
+  nav.light-mode {
+    background-color: #ddd;
+  }
+  
+  .loading-screen.light-mode {
+    background-color: #f0f0f0;
+    color: #007bff;
+  }
+  
+  .loading-bar-container.light-mode {
+    background-color: #e0e0e0;
+    box-shadow: 0 0 15px #007bff;
+  }
+  
